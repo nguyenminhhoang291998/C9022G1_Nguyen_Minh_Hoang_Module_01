@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị kết quả</title>
+</head>
+<body>
+<h2>Hiển thị kết quả qua alert</h2>
+
+<button type="button" onclick="showMessage();">Gửi</button>
+<script>
+    function showMessage() {
+        alert('Hiển thị qua alert');
+
+    }
+</script>
+
+
+<h2>Hiển thị kết quả qua thẻ HTML</h2>
+
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage1();">Gửi</button>
+<script>
+    function showMessage1() {
+        document.getElementById('messageDiv').innerHTML='Xin Chào';
+
+    }
+</script>
+
+<h2>Hiển thị kết quả qua document.wite()</h2>
+<button type="button" onclick="showMessage2()">Gửi</button>
+<script>
+    function showMessage2() {
+        document.write('Hello')
+
+    }
+</script>
+
+<h2>Hiển thị kết quả qua console.log()</h2>
+<button type="button" onclick="showMessage3()">Gửi</button>
+<script>
+    function showMessage3() {
+        console.log('Hello');
+
+    }
+</script>
+</body>
+</html>
