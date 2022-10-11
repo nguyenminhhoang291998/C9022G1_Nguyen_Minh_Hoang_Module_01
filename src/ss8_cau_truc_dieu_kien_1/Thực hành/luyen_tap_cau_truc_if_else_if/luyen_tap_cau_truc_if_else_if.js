@@ -1,14 +1,14 @@
-let value = prompt("Nhập tên:","")
-if (value == "Admin"){
-    let value1 = prompt("Nhập mật khẩu","")
-    if (value1 == "TheMaster"){
+let name = prompt("Nhập tên:")
+if (name == "Admin"){
+    let password = prompt("Nhập mật khẩu","")
+    if (password == "TheMaster"){
         alert("Welcome")}
-        else if (value1 == "null"){
+        else if (password == "null"){
             alert("Canceled")}
         else
             alert("Wrong password")}
 
-else if (value == "null") {
+else if (name == "null") {
     alert("canceld")}
     else
         alert("I'dont know you")

@@ -1,4 +1,4 @@
-let year = parseInt(prompt("Enter a year"));
+let year = parseInt(prompt("Nhập năm: "));
 let isLeapYear = false;
 
 if (year % 4 == 0) {
@@ -13,7 +13,7 @@ if (year % 4 == 0) {
 }
 
 if (isLeapYear) {
-    alert(year + " is a leap year");
+    alert(year + " là năm nhuận");
 } else {
-    alert(year + " is NOT a leap year");
+    alert(year + " không phải là năm nhuận");
 }

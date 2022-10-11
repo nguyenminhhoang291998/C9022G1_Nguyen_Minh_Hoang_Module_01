@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Puzzke</title>
+
+</head>
+
+<p onclick="changePic1()" id="pic1"><img src="picture/cho1.png" height="151" width="400"/></p><br>
+<img onclick="changePic2" src="picture/gau2.png" height="151" width="400"/><br>
+
+<img onclick="changePic3" src="picture/meo3.png" height="151" width="400"/>
+<body>
+<script>
+   function changePic1() {
+       let cho1 = <img src="picture/cho1.png" height="151" width="400"/>
+       let gau1 = <img src="picture/gau1.png" height="151" width="400"/>
+       let meo1 = <img src="picture/meo1.png" height="151" width="400"/>
+       if (Math.random() > (1/3)){
+           document.getElementById("pic1").innerHTML = cho1
+       }
+
+
+
+
+
+
+
+
+
+
+
+   }
+    </script>
+
+
+</body>
+
+</html>
