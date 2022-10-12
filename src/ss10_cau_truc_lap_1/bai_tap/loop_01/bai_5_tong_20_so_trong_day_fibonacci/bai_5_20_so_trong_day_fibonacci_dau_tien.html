@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n1 = 0, n2 = 1, nextNumber = 0, sum = n1 + n2;
+    for(let i = 1; i<=18 ; i++){
+        nextNumber = n1 + n2;
+        sum += parseInt(n1);
+        n1 = n2;
+        n2 = nextNumber;
+
+    }
+    document.write(sum)
+
+</script>
+</body>
+</html>
