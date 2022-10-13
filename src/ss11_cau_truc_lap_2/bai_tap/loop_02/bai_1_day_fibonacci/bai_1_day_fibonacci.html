@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy Fibonacci</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Bạn muốn hiển thị bao nhiêu số đầu tiên trong dãy Fibonacci: "))
+    let n1 = 0, n2 = 1, nextNumber = 0;
+    for( i = 1; i<=a ; i++){
+        nextNumber = n1 + n2;
+        n1 = n2;
+        n2 = nextNumber;
+        document.write(nextNumber + "<br>")
+    }
+</script>
+</body>
+</html>

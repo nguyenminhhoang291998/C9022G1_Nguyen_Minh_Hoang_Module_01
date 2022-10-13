@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b id="triangle1"></b><br>
+<b id="triangle2"></b><br>
+<b id="triangle3"></b><br>
+<b id="triangle4"></b><br>
+
+
+
+<script>
+
+    function triangle1(){
+        let i=1;
+        let a=5
+        let triangle = "";
+        while (i<=a){
+            for(let j=1;j<=i;j++){
+                triangle += "*"
+            }
+            triangle += "<br>";
+            i++
+        }
+        document.getElementById("triangle1").innerHTML = triangle
+    }
+triangle1();
+
+
+    function triangle2(){
+        let a=5
+        let triangle = "";
+        while (a>0){
+            for(let j=1;j<=a;j++){
+                triangle += "*"
+            }
+            triangle += "<br>";
+            a--;
+        }
+        document.getElementById("triangle2").innerHTML = triangle
+    }
+    triangle2();
+
+    function triangle3(){
+      let a = 5;
+      let triangle = "";
+
+          for(let j=1;j<=a;j++){
+              for(let i=1;i<= (a-j);i++ ){
+                  triangle += "&nbsp&nbsp"
+          }
+            for(let k=1; k<=j;k++){
+                triangle += "*"
+            }
+              triangle += "<br>"
+          }
+        document.getElementById("triangle3").innerHTML = triangle
+    }
+    triangle3();
+
+    function triangle4(){
+        let a = 6;
+        let triangle = "";
+
+        for(let j=1;j<=a;j++){
+            for(let i=1;i<= (a-j);i++ ){
+                triangle += "*"
+            }
+            for(let k=1; k<=j;k++){
+                triangle += "&nbsp&nbsp"
+            }
+            triangle += "<br>"
+        }
+        document.getElementById("triangle4").innerHTML = triangle
+    }
+    triangle4();
+
+
+
+</script>
+</body>
+</html>
