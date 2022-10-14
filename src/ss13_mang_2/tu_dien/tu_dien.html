@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<b>Nhập từ:</b><input id="input" type="text">  <button onclick="dich()">Dịch</button><br>
+<b id="result"></b>
+
+<script>
+    function dich(){
+    let arr_eng = ["apple","banana","orange","pen","book"];
+    let arr_vie = ["táo","chuối","Cam","bút","sách"];
+    let tuNhap = document.getElementById('input').value
+
+        for(let x =0; x <arr_eng.length;x++){
+            if (tuNhap == arr_eng[x]){
+                document.getElementById("result").innerHTML = arr_vie[x]
+            }
+            else
+                document.getElementById("result").innerText = "Không tìm thấy"
+        }
+    }
+
+
+</script>
+</body>
+</html>
