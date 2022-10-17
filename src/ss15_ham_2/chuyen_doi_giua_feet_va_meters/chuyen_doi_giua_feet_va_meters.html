@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<p id="p1"></p><br>
+<p id="p2"></p>
+
+<script>
+    let a = parseInt(prompt("Nhập số feet: "))
+     feetToMetters(a);
+    let x = parseInt(prompt("Nhập số mét: "))
+    mettersToFeet(x);
+
+
+function feetToMetters(a) {
+    let b = (a*0.305)
+    let result = a + " feet bằng " + b + " mét";
+
+    document.getElementById("p1").innerHTML = result
+}
+    function mettersToFeet(x) {
+        let y = (x*3.279)
+        let result = x + " mét bằng " + y + " feet";
+
+        document.getElementById("p2").innerHTML = result
+    }
+</script>
+</body>
+</html>

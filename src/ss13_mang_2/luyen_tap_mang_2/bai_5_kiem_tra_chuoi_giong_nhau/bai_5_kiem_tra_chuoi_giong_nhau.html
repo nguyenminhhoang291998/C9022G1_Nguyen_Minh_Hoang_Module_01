@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = prompt("Nhập chuỗi thứ nhất: ")
+    str1 = str1.replace(/(^\s*)|(\s*$)/gi,"");
+    str1 = str1.replace(/[ ]{2,}/gi," ");
+
+    let str2 = prompt("Nhập chuỗi thứ hai: ")
+    str2 = str2.replace(/(^\s*)|(\s*$)/gi,"");
+    str2 = str2.replace(/[ ]{2,}/gi," ");
+
+    let same = true;
+    for(let i=0; i<str1.length; i++) {
+        if (str1[i] == str2[i]) {
+            for (let j = 0; j < str2.length; j++) {
+                if (str2[j] == str1[j]) {
+                  same = true;
+
+                }else
+                    same = false
+            }
+        }
+        else
+            same = false
+    }
+    if(same == true){
+                alert("Hai chuỗi này giống nhau");}
+    if(same == false){
+        alert("Hai chuỗi này không giống nhau");}
+
+
+
+
+</script>
+</body>
+</html>

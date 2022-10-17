@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+</head>
+<body>
+<h2>Add New Product</h2>
+<input type="text" placeholder="New Product" id="nhap"> <button id="add" onclick="addProduct()">Add</button><br>
+<h2>Display All Product</h2>
+<h4>Product Name</h4>
+<table id="product">
+</table>
+<script>
+    var matHang = ["Sony Xperia","Samsung Galaxy","Xiaomi Mi8","Apple Iphone14"]
+    function product() {
+        let a = matHang
+        let data = "";
+        for(let i =0;i<a.length;i++){
+            data += '<tr>' ;
+            data += '<td>' + a[i] + '</td>'
+            data += '<td><button onclick="edit('+ i +')">Edit</button></td>'
+            data += '<td> <button onclick="xoa('+ i + ')">Delete</button></td>'
+
+        }
+        document.getElementById("product").innerHTML = data;
+
+    }
+    product();
+
+function addProduct() {
+    let x = document.getElementById("nhap").value
+    if(x != "") {
+        let a = matHang
+        let data = "";
+        a.push(x);
+        for (let i = 0; i < a.length; i++) {
+            data += '<tr>';
+            data += '<td>' + a[i] + '</td>'
+            data += '<td><button onclick="edit(' + i + ')">Edit</button></td>'
+            data += '<td> <button onclick="xoa('+ i + ')">Delete</button></td>'
+
+        }
+        document.getElementById("product").innerHTML = data;
+    }
+}
+function edit(y) {
+    let k = prompt("Nhập giá trị cần sửa: ")
+
+    matHang.splice(y,1,k)
+    product();
+
+    }
+
+
+
+function xoa(l) {
+        matHang.splice(l,1)
+        product();
+}
+
+
+</script>
+</body>
+</html>
