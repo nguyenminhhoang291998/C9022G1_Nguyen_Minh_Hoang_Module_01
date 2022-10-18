@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    while (a.length <5){
+        x = window.prompt("Nhập vào phần tử số nguyên: ");
+        a.push(x)
+    }
+    console.log(a)
+   reverse(a);
+
+    function reverse(a) {
+        let result = [];
+        let b = (a.length - 1);
+        console.log(b)
+        while (b >= 0) {
+            (result.push(a[b]))
+            b--;
+        }
+        alert(result)
+    }
+</script>
+</body>
+</html>

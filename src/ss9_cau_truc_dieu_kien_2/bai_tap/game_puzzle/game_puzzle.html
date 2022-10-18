@@ -9,34 +9,46 @@
 
 </head>
 
-<p onclick="changePic1()" id="pic1"><img src="picture/cho1.png" height="151" width="400"/></p><br>
-<img onclick="changePic2" src="picture/gau2.png" height="151" width="400"/><br>
-
-<img onclick="changePic3" src="picture/meo3.png" height="151" width="400"/>
+<img src="picture/cho1.png" id="pic1" onclick="changePic1()" height="151" width="400"/><br>
+<img src="picture/gau2.png" id="pic2" onclick="changePic2()" height="151" width="400"/><br>
+<img src="picture/meo3.png" id="pic3" onclick="changePic3()" height="151" width="400"/>
 <body>
 <script>
-   function changePic1() {
-       let cho1 = <img src="picture/cho1.png" height="151" width="400"/>
-       let gau1 = <img src="picture/gau1.png" height="151" width="400"/>
-       let meo1 = <img src="picture/meo1.png" height="151" width="400"/>
-       if (Math.random() > (1/3)){
-           document.getElementById("pic1").innerHTML = cho1
-       }
+
+    function changePic1() {
+        var imageId1 = document.getElementById("pic1");
+        if (imageId1.src.match("picture/cho1.png")) {
+            imageId1.src = "picture/gau1.png"
+        } else if (imageId1.src.match("picture/gau1.png")) {
+            imageId1.src = "picture/meo1.png"
+        } else
+            imageId1.src = "picture/cho1.png"
+        return imageId1;
+    }
+
+    function changePic2() {
+        var imageId2 = document.getElementById("pic2");
+        if(imageId2.src.match("picture/cho2.png") ){
+            imageId2.src = "picture/gau2.png"
+        }else if (imageId2.src.match("picture/gau2.png")){
+            imageId2.src = "picture/meo2.png"
+        }else
+            imageId2.src = "picture/cho2.png"
+    }
+    function changePic3() {
+        var imageId2 = document.getElementById("pic3");
+        if(imageId2.src.match("picture/meo3.png") ){
+            imageId2.src = "picture/gau3.png"
+        }else if (imageId2.src.match("picture/gau2.png")){
+            imageId2.src = "picture/meo3.png"
+        }else
+            imageId2.src = "picture/cho3.png"
+    }
 
 
 
 
-
-
-
-
-
-
-
-   }
-    </script>
-
+</script>
 
 </body>
 
-</html>
