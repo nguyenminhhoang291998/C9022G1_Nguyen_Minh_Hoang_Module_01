@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let s1 = [5, 2, 7, 3, 5, 3]
+    let s2 = [7, 2, 5, 4, 6, 3, 5, 3];
+    let s3 = [];
+    let x = s1.length
+
+    let flag = false;
+
+
+    function missingValue(s1,s2) {
+        for (let i = 0; i < s2.length; i++) {
+            flag = false;
+            for (let j = 0; j < x; j++) {
+                if (s2[i] === s1[j]) {
+                    s1.splice(j, 1)
+                    flag = true;
+                    break;
+                }
+
+            }
+        }if(flag===false){
+            s3.push(s2[i])}
+
+    }
+
+    missingValue(s1,s2)
+    alert(s3)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong = parseInt(prompt("Nhập lương của nhân viên: "))
+    let thue = 0;
+    let thuc = 0;
+    if(luong >= 15000000){
+        thue = luong*0.2
+        thuc = luong - thue
+    } else if(luong >= 7000000){
+        thue = luong*0.1
+        thuc = luong - thue
+    } else {
+        thue = luong*0.05
+        thuc = luong - thue
+    }
+    alert("Lương thực nhận của nhân viên đó là: " +thuc +" VNĐ và thuế nhân viên phải nộp là: " + thue + " VNĐ" )
+</script>
+</body>
+</html>

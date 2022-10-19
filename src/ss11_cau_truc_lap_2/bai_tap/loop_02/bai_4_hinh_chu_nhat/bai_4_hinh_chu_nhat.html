@@ -8,23 +8,23 @@
 <script>
 
 
-        let result = '';
-        for (let i = 0; i<=6; i++) {
-            for (let j = 0; j <= 20; j++) {
-                if (i == 0 || i == 6) {
+    let result = '';
+    for (let i = 0; i <= 6; i++) {
+        for (let j = 0; j <= 20; j++) {
+            if (i == 0 || i == 6) {
+                result += '*';
+            } else {
+                if (j == 0 || j == 20) {
                     result += '*';
                 } else {
-                    if (j == 0 || j == 20) {
-                        result += '*';
-                    } else {
-                        result += '&nbsp&nbsp;';
-                    }
+                    result += '&nbsp&nbsp;';
                 }
-
             }
-            result += '<br/>'
+
         }
-        document.write(result)
+        result += '<br/>'
+    }
+    document.write(result)
 
 </script>
 </body>

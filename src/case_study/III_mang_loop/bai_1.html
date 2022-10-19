@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1,3,5,6,8]
+    let b= []
+    let c = 0;
+    for(let i =0; i<a.length; i++){
+        for(let j=1; j<=a[i];j++) {
+            c += j
+        }
+        b.push(c)
+        c=0;
+    }
+    alert(b)
+</script>
+</body>
+</html>

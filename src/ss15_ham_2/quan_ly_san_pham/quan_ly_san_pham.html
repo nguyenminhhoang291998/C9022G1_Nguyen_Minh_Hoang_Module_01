@@ -12,7 +12,7 @@
 <table id="product">
 </table>
 <script>
-    var matHang = ["Sony Xperia","Samsung Galaxy","Xiaomi Mi8","Apple Iphone14"]
+    let matHang = ["Sony Xperia","Samsung Galaxy","Xiaomi Mi8","Apple Iphone14"]
     function product() {
         let a = matHang
         let data = "";
@@ -21,7 +21,7 @@
             data += '<td>' + a[i] + '</td>'
             data += '<td><button onclick="edit('+ i +')">Edit</button></td>'
             data += '<td> <button onclick="xoa('+ i + ')">Delete</button></td>'
-
+            data += '</tr>'
         }
         document.getElementById("product").innerHTML = data;
 
@@ -39,13 +39,13 @@ function addProduct() {
             data += '<td>' + a[i] + '</td>'
             data += '<td><button onclick="edit(' + i + ')">Edit</button></td>'
             data += '<td> <button onclick="xoa('+ i + ')">Delete</button></td>'
-
+            data += '</tr>'
         }
         document.getElementById("product").innerHTML = data;
     }
 }
 function edit(y) {
-    let k = prompt("Nhập giá trị cần sửa: ")
+    let k = prompt("Nhập giá trị cần sửa: ",matHang[y])
 
     matHang.splice(y,1,k)
     product();
