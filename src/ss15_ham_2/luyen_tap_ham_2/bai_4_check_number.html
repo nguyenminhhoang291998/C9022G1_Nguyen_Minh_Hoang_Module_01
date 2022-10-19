@@ -9,10 +9,10 @@
     let a = parseInt(prompt("Nhập 1 ký tự: "))
     check(a);
     function check(a) {
-        if (a>=0 && a<=9){
+        if (!isNaN(a)){
             alert("Đây là 1 ký tự số")
         }else
-            alert("Đây không phải là 1 ký tự số")
+        alert("Đây không phải là 1 ký tự số")
 
     }
 </script>
