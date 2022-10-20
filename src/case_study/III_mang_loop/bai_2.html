@@ -8,7 +8,7 @@
 <script>
 
     let s1 = [5, 2, 7, 3, 5, 3]
-    let s2 = [7, 2, 5, 4, 6, 3, 5, 3];
+    let s2 = [7, 2, 5, 4, 6, 3, 5, 3,1,8];
     let s3 = [];
     let x = s1.length
 
@@ -20,14 +20,16 @@
             flag = false;
             for (let j = 0; j < x; j++) {
                 if (s2[i] === s1[j]) {
-                    s1.splice(j, 1)
                     flag = true;
                     break;
-                }
+                }else
+                    flag = false;
 
             }
-        }if(flag===false){
-            s3.push(s2[i])}
+            if (flag == false){
+                s3.push(s2[i])
+            }
+        }
 
     }
 

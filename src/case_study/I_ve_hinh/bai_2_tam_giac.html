@@ -9,12 +9,21 @@
 <script>
     let data ="";
     for(let i=1; i<=5;i++){
-        for (let j=1; j<=5;i++){
-            if(i=5){
+        for (let j=1; j<=i;j++) {
+            if(i==1 || i==2 || i==5){
                 data += "*"
-            }else if ()
+            }else
+            {for (let k=1; k<= j-2;k++){
+                data += "*"
+                data += "&nbsp&nbsp"
+                data += "*"
+            }}
+
+
 
         }
+
+        data += '<br>'
     }
     document.getElementById("result").innerHTML = data
 

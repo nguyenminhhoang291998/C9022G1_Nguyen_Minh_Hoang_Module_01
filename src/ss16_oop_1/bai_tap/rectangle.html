@@ -5,33 +5,44 @@
     <title>Title</title>
 </head>
 <body>
-<canvas id="myCanvas"></canvas>
+<canvas id="myCanvas" width="200px" height="100px"></canvas>
 <script>
-    let rectangle = function (height,width) {
-        this.height = height;
-        this.width = width;
-        this.getHeight = function () {
-            return height;
-        }
-        this.getWidth = function () {
-            return width;
-        }
+    class Rectangle{
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
 
-        this.getArea = function () {
-            return (height*width)
         }
-        this.getPerimeter = function () {
-            return (height+width)*2
+        getWidth(){
+            return this.width;
         }
+        getHeight(){
+            return this.height;
+        }
+        getArea(){
+            return (this.width* this.height);
+    }
+    getPerimeter(){
+            return (this.width+ this.height)*2;
+    }
 
     }
     function createRectangle() {
         let ctx = document.getElementById("myCanvas").getContext("2d")
-        ctx.fillStyle="fa4b2a";
-        ctx.fillRect(10,10,rectangle.height,rectangle.width)
+        ctx.fillStyle='#2a3ffa';
+        ctx.fillRect(10,10,a,b)
+
     }
-    let m = new rectangle(50,10)
-    document.getElementById("myCanvas").innerHTML = createRectangle()
+    let myRectangle = new Rectangle(500,1000)
+    let a = myRectangle.getWidth()
+    let b = myRectangle.getHeight()
+    createRectangle();
+    document.write("Diện tích hình chữ nhật là: " + myRectangle.getArea())
+    document.write(" và Chu vi hình chữ nhật là: " + myRectangle.getPerimeter())
+
+
+
+
 </script>
 </body>
 </html>
