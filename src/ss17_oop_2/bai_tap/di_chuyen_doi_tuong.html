@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="game"></p>
+<script>
+    class Car{
+        constructor(image,top,left,size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            // this.up = up;
+            // this.down = down;
+            this.size = size;
+
+            this.getCarElement = function () {
+                return '<img width="'+ this.size + '"' +
+                    ' height="'+ this.size + '"' +
+                    ' src="' + this.image +'"' +
+                    ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+
+            }
+
+            this.moveRight = function(){
+                this.left += 30;
+            }
+            this.moveLeft = function(){
+                this.left -= 30;
+            }
+            this.moveDown = function(){
+                this.top += 30;
+            };
+            this.moveUp= function(){
+                this.top -= 30;
+            }
+        }
+
+
+
+    }
+    let car = new Car("xe.png", 20, 30, 100);
+
+    function start(){
+        if(car.top < window.innerHeight - car.size){
+            car.moveDown()
+        }else if (car.left < window.innerWidth - car.size){
+            car.moveRight();
+        }
+        document.getElementById('game').innerHTML = car.getCarElement();
+        setTimeout(start, 50)
+    }
+start();
+</script>
+</body>
+</html>
