@@ -10,19 +10,53 @@
 <table>
 
     <p id="list"></p>
+    <tr>
+        <td>
+            <button onclick="end()" style="width: 150px; text-align: center">7.THOÁT GỌI MÓN</button>
+        </td>
+    </tr>
+
+
 </table>
 
+
 <script>
-    let menu = ["Cafe","Cam vắt","Nước ép cà rốt","Nước ép cà chua","Nước lọc","Nước dừa"]
+    let menu = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"]
+    let price = [15000, 20000, 22000, 18000, 10000, 17000]
     data = ""
-    for(let i=0; i<menu.length; i++){
+    for (let i = 0; i < menu.length; i++) {
         data += '<tr>'
-        data += '<td><button style="width: 150px; text-align: center">' + menu[i]+'</button></td>'
+        data += '<td><button onclick="chose(' + i + ')" style="width: 150px; text-align: center">' + (i + 1) + '.' + menu[i] + '</button></td>'
         data += '</tr><br><br>'
     }
     document.getElementById('list').innerHTML = data
-</script>
+    let j = 0;
 
+    let d = '';
+    do {
+        function chose(i) {
+            let k = parseInt(prompt("Đơn giá của " + menu[i] + " là: " + price[i] + " VNĐ. Xin mời nhập số lượng: "))
+            while (k == 0 || isNaN(k)) {
+                k = prompt("Mời bạn nhập lại số lượng: ")
+            }
+            alert("Tổng tiền phải trả cho mặt hàng này là: " + (price[i] * k) + " VNĐ")
+            j += price[i] * k
+            d += k + " " + menu[i] + " "
+
+
+        }
+    }
+    while (i < 7);
+
+
+    function end() {
+        alert("Bạn đã thoát gọi món. Đơn hàng của bạn là: " + d + "Tổng: " + j +" VNĐ")
+
+
+    }
+
+
+</script>
 
 </body>
 </html>

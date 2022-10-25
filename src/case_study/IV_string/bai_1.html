@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let str = "tRuong    TaN   HAI"
+    str = str.replace(/[ ]{2,}/gi," ");
+    str = str.toLowerCase().replace(/(^|\s)\S/g, l => l.toUpperCase());
+    alert(str)
+    findLongest(str)
+
+    function findLongest (str) {
+        let str1 = str.split(' ');
+        console.log(str1)
+        let maxLength = 0;
+        let max = '';
+        for (let i = 0; i < str1.length; i++) {
+            if (str1[i].length > maxLength) {
+                maxLength = str1[i].length
+                max = str1[i];
+
+            }
+        }
+        alert("Từ dài nhất trong chuỗi là " + max +" có " + maxLength + " ký tự.");
+    }
+
+</script>
+</body>
+</html>

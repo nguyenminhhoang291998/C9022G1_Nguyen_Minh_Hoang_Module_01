@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = "aabcc"
+    let s1 = a.split('')
+    let b = "adcaa"
+    let s2 = b.split('')
+    let count = 0;
+    let result =[]
+
+    function commonCharacterCount(s1, s2) {
+        for (let i = 0; i < s1.length; i++) {
+            for (let j = 0; j < s2.length; j++) {
+                if (s1[i] == s2[j]) {
+                    result.push(s1[i])
+                    s1.splice(i, 1);
+                    count++
+                    console.log(s1, s2)
+
+                }
+            }
+        }
+
+
+    }
+    commonCharacterCount(s1, s2)
+    alert("Chuỗi a và b có "+count + " ký tự chung là " + result)
+</script>
+</body>
+</html>
