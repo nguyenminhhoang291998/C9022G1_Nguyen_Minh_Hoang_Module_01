@@ -81,41 +81,87 @@
 <div class="row">
     <div class="col-2 col-s-2 menu">
         <ul>
-            <li>Bài 1</li>
-            <li>Bài 2</li>
-            <li>Bài 3</li>
-            <li>Bài 4</li>
-            <li>Bài 5</li>
-            <li>Bài 6</li>
-            <li>Bài 7</li>
+            <li><p onclick="bai1()" style="width: 70px; font-size: 20px; height: 30px; text-align: center;padding-top: 2px">Bài 1</p></li>
+            <li><p onclick="bai2()" style="width: 70px; font-size: 20px; height: 30px; text-align: center;padding-top: 2px">Bài 2</p></li>
+            <li><p onclick="bai3()" style="width: 70px; font-size: 20px; height: 30px; text-align: center;padding-top: 2px">Bài 3</p></li>
+            <li><p onclick="bai4()" style="width: 70px; font-size: 20px; height: 30px; text-align: center;padding-top: 2px">Bài 4</p></li>
+            <li><p onclick="bai5()" style="width: 70px; font-size: 20px; height: 30px; text-align: center;padding-top: 2px">Bài 5</p></li>
+            <li><p onclick="bai6()" style="width: 70px; font-size: 20px; height: 30px; text-align: center;padding-top: 2px">Bài 6</p></li>
+            <li><p onclick="bai7()" style="width: 70px; font-size: 20px; height: 30px; text-align: center;padding-top: 2px">Bài 7</p></li>
         </ul>
-<!--        <select>-->
-<!--            <option>Bài tập 1</option>-->
-<!--        </select><br>-->
-<!--        <select>-->
-<!--            <option>Bài tập 2</option>-->
-<!--        </select><br>-->
-<!--        <select>-->
-<!--            <option>Bài tập 3</option>-->
-<!--        </select><br>-->
-<!--        <select>-->
-<!--            <option>Bài tập 4</option>-->
-<!--        </select><br>-->
-<!--        <select>-->
-<!--            <option>Bài tập 5</option>-->
-<!--        </select>-->
+
     </div>
     <div class="col-10 col-s-10" style="height: 412px" >
-        <p>
+        <div id="data">
 
-        </p>
+        </div>
     </div>
 
 </div>
 <div class="span2"></div>
 
 
+<script>
+    function bai1() {
+        document.getElementById("data").innerHTML = '<img src="bai_1.png" height="273" width="789"/>'
+            +'<br>' + '<button onclick="linkBai1()" style="width: 80px;height: 40px;font-size: 15px; margin-left: 35%">Bài nộp</button>'
+    }
+    function linkBai1() {
+        window.open("https://github.com/nguyenminhhoang291998/C9022G1_Nguyen_Minh_Hoang_Module_01/blob/main/src/case_study/I_ve_hinh/bai_1.html");
+
+    }
+    function bai2() {
+        document.getElementById("data").innerHTML = " <img src=\"bai_2.png\" height=\"273\" width=\"789\"/>"
+            +'<br>' + '<button onclick="linkBai2()" style="width: 80px;height: 40px;font-size: 15px; margin-left: 35%">Bài nộp</button>'
+    }
+    function linkBai2() {
+        window.open("https://github.com/nguyenminhhoang291998/C9022G1_Nguyen_Minh_Hoang_Module_01/blob/main/src/case_study/II_if_switch_case/bai_1_tinh_luong.html");
+
+    }
+    function bai3() {
+        document.getElementById("data").innerHTML = "<img src=\"bai_3.png\" height=\"206\" width=\"789\"/>"
+            +'<br>' + '<button onclick="linkBai3()" style="width: 80px;height: 40px;font-size: 15px; margin-left: 35%">Bài nộp</button>'
+    }
+    function linkBai3() {
+        window.open("https://github.com/nguyenminhhoang291998/C9022G1_Nguyen_Minh_Hoang_Module_01/blob/main/src/case_study/III_mang_loop/bai_2.html");
+
+    }
+    function bai4() {
+        document.getElementById("data").innerHTML = "<img src=\"bai_4.png\" height=\"216\" width=\"789\"/>"
+            +'<br>' + '<button onclick="linkBai4()" style="width: 80px;height: 40px;font-size: 15px; margin-left: 35%">Bài nộp</button>'
+    }
+    function linkBai4() {
+        window.open("https://github.com/nguyenminhhoang291998/C9022G1_Nguyen_Minh_Hoang_Module_01/blob/main/src/case_study/IV_string/bai_1.html");
+
+    }
+    function bai5() {
+        document.getElementById("data").innerHTML = "<img src=\"bai_5.png\" height=\"133\" width=\"789\"/>"
+            +'<br>' + '<button onclick="linkBai5()" style="width: 80px;height: 40px;font-size: 15px; margin-left: 35%">Bài nộp</button>'
+    }
+    function linkBai5() {
+        window.open("https://github.com/nguyenminhhoang291998/C9022G1_Nguyen_Minh_Hoang_Module_01/blob/main/src/case_study/V_mang_2_chieu/bai_1.html");
+
+    }
+    function bai6() {
+        document.getElementById("data").innerHTML = "<img src=\"bai_6.png\" height=\"318\" width=\"789\"/>"
+            +'<br>' + '<button onclick="linkBai6()" style="width: 80px;height: 40px;font-size: 15px; margin-left: 35%">Bài nộp</button>'
+    }
+    function linkBai6() {
+        window.open("https://github.com/nguyenminhhoang291998/C9022G1_Nguyen_Minh_Hoang_Module_01/blob/main/src/case_study/VI_oop.html");
+
+    }
+    function bai7() {
+        document.getElementById("data").innerHTML = "<img src=\"bai_7.png\" height=\"338\" width=\"789\"/>"
+            +'<br>' + '<button onclick="linkBai7()" style="width: 80px;height: 40px;font-size: 15px; margin-left: 35%">Bài nộp</button>'
+    }
+    function linkBai7() {
+        alert("YOU ARE HERE.")
+    }
 
 
+
+
+</script>
 </body>
+
 </html>
