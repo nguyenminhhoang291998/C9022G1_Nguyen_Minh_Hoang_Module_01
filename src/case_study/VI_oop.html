@@ -81,9 +81,11 @@
         }else
         document.getElementById(a).value = f
     }
-
+    let luotKetQua =0;
     function xemKetQua() {
-        if (luotMua == 0) {
+        if(luotKetQua ==1){
+            alert("Mời bạn tải lại trang để mua mới.")
+        }else if (luotMua == 0) {
             alert("Bạn chưa mua vé");
         } else {
             random('result1');
@@ -97,12 +99,16 @@
             for (let i = 0; i < veDaMua.length; i++) {
                 veKetQua.checkGiai(veDaMua[i])
             }
+            luotKetQua++;
         }
+
     }
 
     let luotMua = 0;
     function muaVe() {
-        if (luotMua === 4) {
+        if(luotKetQua ==1) {
+            alert("Mời bạn tải lại trang để mua mới.")
+        } else if (luotMua === 4) {
             alert("Bạn đã hết lượt mua vé.")
         } else if (luotMua < 4) {
             if (checkNhap('guess1') === false || checkNhap('guess2') === false || checkNhap('guess3') === false

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*Viết chương trình tách đôi mảng số nguyên ban đầu sang hai mảng, một nửa đầu sang mảng thứ nhất
+    và nửa còn lại sang mảng thứ hai. Sau đó hiển thị hai mảng đó ra màn hình.
+     */
+    let arr = [];
+    let arr1 = [];
+    let arr2 = [];
+    let n = parseInt(prompt("Nhập độ dài mảng số nguyên: "));
+    for (let i = 0; i <n; i++) {
+        let a = prompt("Nhập phần tử thứ "+ i+" :");
+        arr.push(a)
+    }
+    // Math.round làm tròn 2.5 =>3 còn parseInt lấy phần nguyên 2.5 => 2
+    let k = Math.round(arr.length/2);
+    for (let j = 0; j < k ; j++) {
+        arr1.push(arr[j]);
+    }
+    for (let j = k; j < arr.length ; j++) {
+        arr2.push(arr[j]);
+    }
+    alert(arr1)
+    alert(arr2)
+
+</script>
+</body>
+</html>
