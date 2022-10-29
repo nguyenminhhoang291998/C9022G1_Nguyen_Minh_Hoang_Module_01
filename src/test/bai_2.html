@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chuỗi ký tự ")
+    a = a.toString();
+
+    let b =[]
+
+    function check(a) {
+        a = a.replace(/[ ]{2,}/gi," ");
+        a = a.split(' ')
+        if(a.length>=2){
+            for (let i = 0; i <a.length ; i++) {
+                b.push(a[i].charAt(0).toUpperCase())
+            }
+            alert(b.join(""))
+        }else{
+            alert("Chuỗi chỉ có 1 từ nên không cần viết tắc")
+        }
+    }
+    check(a);
+
+
+</script>
+
+</body>
+</html>

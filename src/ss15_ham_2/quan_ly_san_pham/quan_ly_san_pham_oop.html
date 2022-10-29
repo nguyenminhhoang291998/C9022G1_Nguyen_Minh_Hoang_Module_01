@@ -16,17 +16,16 @@
 </head>
 <body>
 <span style="color: #241703; text-align:center;display:block;font-size: 50px">QUẢN LÝ MẶT HÀNG</span>
-<table style="margin-left: 31%; background-color: #05ff09;font-size: 15px">
+<table style="margin-left: 35%; background-color: #05ff09;font-size: 15px">
     <tr><th>Tên mặt hàng</th>
         <th>Số lượng</th>
         <th>Đơn giá</th>
-        <th>Ngày nhập kho</th>
+
     </tr>
     <tr>
         <td ><input type="text"></td>
         <td><input type="number" style="width: 50px"></td>
         <td><input type="number" style="width: 80px"></td>
-        <td><input type="date"></td>
         <td><button style="color: #ffffff; background-color: #0910d9">Thêm</button></td>
     </tr>
 
@@ -34,13 +33,38 @@
 
 
 </table>
-
+<br>
+<span style="color: #241703; text-align:center;display:block;font-size: 40px">Mặt hàng hiện tại</span>
+<p id="product"></p>
 
 <script>
-    class QUanLy{
-        constructor() {
+    let allproduct = [tao];
+    class Product{
+        constructor(name,amount,price) {
+            this.name=name;
+            this.amount=amount;
+            this.price=price;
+
         }
+        getName(){
+            return this.name;
+        }
+        getAmount(){
+            return this.amount;
+        }
+        getPrice(){
+            return this.price;
+        }
+
     }
+
+    let data="";
+    console.log(allproduct)
+    function creatTable() {
+
+
+    }
+
 </script>
 </body>
 </html>

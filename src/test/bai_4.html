@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<button onclick="hienThi()">Hiển thị danh sách</button>
+<button onclick="them()">Thêm</button>
+<script>
+    class TaiKhoanNganHang {
+        constructor(ma, ten, tenNganHang, tongTien) {
+            this.Ma = ma;
+            this.Ten = ten;
+            this.TenNganhang = tenNganHang;
+            this.TongTien = tongTien;
+        }
+
+        getMa() {
+            return this.Ma;
+        }
+
+        getTen() {
+            return this.Ten;
+        }
+
+        getTenNganhang() {
+            return this.TenNganhang;
+        }
+
+        getTongTien() {
+            return this.TongTien;
+        }
+
+        setMa(ma) {
+            this.Ma = ma;
+        }
+
+        setTen(ten) {
+            this.Ten = ten;
+        }
+
+        setTenNganHang(tenNganHang) {
+            this.TenNganhang = tenNganHang;
+        }
+
+        setTongTien(tongTien) {
+            this.TongTien = tongTien
+        }
+        getfull() {
+            return this.Ma + " " + this.Ten + " " + this.getTenNganhang() + " " + this.TongTien
+        }
+    }
+
+    let danhSachTaiKhoan = [];
+    let count = 1;
+    let data = '';
+    let taiKhoan1 = new TaiKhoanNganHang('12534', 'Nguyen Minh Hoang', 'ACB', 1000000000);
+    danhSachTaiKhoan.push(taiKhoan1)
+    let taiKhoan2 = new TaiKhoanNganHang('111111', 'Nguyen A', 'ACB', 1000000)
+    danhSachTaiKhoan.push(taiKhoan2)
+    countHienthi = 0;
+    function hienThi() {
+        if (countHienthi == 1) {
+            alert("Danh sách đã được hiển thị")
+        } else {
+            for (let i = 0; i < danhSachTaiKhoan.length; i++) {
+                creat(i);
+            }
+            countHienthi++;
+        }
+    }
+    function creat(count) {
+        data += danhSachTaiKhoan[count].getfull() + '<br>'
+        document.getElementById('result').innerHTML = data;
+    }
+
+    function them() {
+        let a = prompt("Nhập mã tài khoản gồm 5 số")
+        a = a.split('')
+        for (let i = 0; i < a.length; i++) {
+            while (isNaN(a[i]) || a.length !== 5) {
+                a = prompt("Mã tài khoản phải là 5 số")
+            }
+        }
+        let b = prompt("Nhập tên chủ tài khoản")
+        let c = prompt("Nhập tên ngân hàng")
+        let d = prompt("Nhập tiền của tài khoản")
+        let name = new TaiKhoanNganHang(a, b, c, d)
+        danhSachTaiKhoan.push(name)
+        count++;
+        creat(count)
+    }
+
+</script>
+</body>
+</html>
