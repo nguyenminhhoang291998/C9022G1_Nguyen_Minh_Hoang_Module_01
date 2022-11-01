@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//Viết chương trình nhập  các phần tử cho mảng sao cho không có phần tử nào trùng nhau.
+    let n = parseInt(prompt("Nhập số lượng phần tử: "))
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let a = prompt("Nhập phần tử thứ "+ i +" :")
+        for (let j = 0; j < arr.length ; j++) {
+            while (arr[j]===a){
+                a = prompt("Phần tử này đã trùng, xin mời nhập lại phần tử thứ "+ i+ " :")
+                j=0;
+            }
+        }arr.push(a);
+    }
+    alert(arr);
+
+
+</script>
+</body>
+</html>

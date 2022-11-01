@@ -11,7 +11,7 @@
         /*html {*/
         /*    height: 100%*/
         /*}*/
-
+        td{text-align: center}
         </style>
 </head>
 <body>
@@ -23,10 +23,10 @@
 
     </tr>
     <tr>
-        <td ><input type="text"></td>
-        <td><input type="number" style="width: 50px"></td>
-        <td><input type="number" style="width: 80px"></td>
-        <td><button style="color: #ffffff; background-color: #0910d9">Thêm</button></td>
+        <td ><input type="text" id="themTen"></td>
+        <td><input type="number" style="width: 50px" id="themSoLuong"></td>
+        <td><input type="number" style="width: 80px" id="themGia"></td>
+        <td><button style="color: #ffffff; background-color: #0910d9" onclick="them()">Thêm</button></td>
     </tr>
 
 <!--<input type="text" placeholder="New Product" id="nhap"> <button id="add" onclick="addProduct()">Add</button><br>-->
@@ -35,16 +35,17 @@
 </table>
 <br>
 <span style="color: #241703; text-align:center;display:block;font-size: 40px">Mặt hàng hiện tại</span>
-<p id="product"></p>
+<span style="text-align: center"><p id="product"></p></span>
 
 <script>
-    let allproduct = [tao];
+    let allProduct = ['Táo','Ổi'];
+    let allAmount = [2,3];
+    let allPrice = [12000,15000]
     class Product{
         constructor(name,amount,price) {
             this.name=name;
             this.amount=amount;
             this.price=price;
-
         }
         getName(){
             return this.name;
@@ -58,13 +59,26 @@
 
     }
 
-    let data="";
-    console.log(allproduct)
-    function creatTable() {
+    let data='<table style="margin-left: 35%"><tr><th style="width: 120px">Tên mặt hàng</th><th style="width: 70px">Số lượng</th><th style="width: 100px">Đơn giá</th></tr></table>'
 
+    function creatTable() {
+        for(let i =0;i<allProduct.length;i++){
+            data += '<table style="margin-left: 35%">'
+            data += '<tr>'
+            data += '<td style="width: 120px">' + allProduct[i] + '</td>'
+            data += '<td style="width: 70px">' + allAmount[i] +'</td>'
+            data += '<td style="width: 100px">' + allPrice[i] +' VNĐ'+ '</td>'
+            data += '<td><button onclick="edit('+ i +')">Edit</button></td>'
+            data += '<td> <button onclick="xoa('+ i + ')">Delete</button></td>'
+            data += '</tr>'
+            data += '</table>'
+        }
+        document.getElementById("product").innerHTML = data;
+    }
+creatTable();
+    function them() {
 
     }
-
 </script>
 </body>
 </html>

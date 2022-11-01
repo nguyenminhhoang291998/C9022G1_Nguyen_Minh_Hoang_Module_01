@@ -20,17 +20,20 @@
     }
     function check() {
         let result = [];
-        for (let i = 0; i < fibonaci.length; i++) {
-            for (let j = 0; j < arr.length; j++) {
-                if ( arr[j]== fibonaci[i] ) {
-                    result.push(arr[j])
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < fibonaci.length; j++) {
+                if ( arr[i]== fibonaci[j] ) {
+                    result.push(arr[i])
                     break;
                 }
             }
         }
-        alert(result)
+        alert(result.sort(checkSort))
     }
     check();
+    function checkSort(a,b){
+        return a-b;
+    }
 </script>
 </body>
 </html>

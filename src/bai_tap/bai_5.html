@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết chương trình nhập vào một mảng số nguyên và sau đó tách các số chẵn và lẻ trong mảng đó sang hai mảng khác.
+    let n = parseInt(prompt("Nhập độ dài của mảng: "))
+    let arr =[];
+    let arr1=[]
+    let arr2=[]
+    for (let i = 0; i < n; i++) {
+        let a = parseInt(prompt("Nhập phần tử thứ "+ i+ " :"))
+        arr.push(a)
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 ==0){
+            arr1.push(arr[i])
+        }else{
+            arr2.push(arr[i])
+        }
+    }
+    alert("Mảng số nguyên chẵn là: " + arr1)
+    alert("Mảng số nguyên lẻ là: " + arr2)
+</script>
+</body>
+</html>

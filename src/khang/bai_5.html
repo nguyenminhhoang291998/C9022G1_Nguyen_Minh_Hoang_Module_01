@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 20: Liệt kê tất cả các “ước số” của số nguyên dương n
+    let arr = [];
+    let a = parseInt(prompt("nhập số nguyên n"))
+    while (a<1){
+        a = parseInt(prompt("nhập số nguyên dương n"));
+    }
+    for (let i = 1; i <= a; i++) {
+            if(a % i ==0){
+                arr.push(i)
+            }
+    }
+    alert(arr)
+</script>
+</body>
+</html>

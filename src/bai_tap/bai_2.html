@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = parseInt(prompt("Nhập chiều dài mảng "));
+    while (n<1){
+        n = parseInt(prompt("ĐỘ dài phải lớn hơn 0"))
+    }
+    for (let i = 0; i < n; i++) {
+        let a = prompt("Nhập phần tử thứ " +i)
+        arr.push(a)
+    }
+    let flag = false;
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] == arr[arr.length - i - 1]){
+            flag = true;
+        }else {
+            flag = false;
+            break;
+        }
+    }
+    if(flag==true){
+        alert("Mảng này đối xứng.")
+    }else{
+        alert("Mảng này không đối xứng.")}
+</script>
+</body>
+</html>
